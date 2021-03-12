@@ -1,15 +1,12 @@
 package com.oumar.react.web.rest;
 
 import com.oumar.react.ReactApp;
-import com.oumar.react.domain.User;
-import com.oumar.react.repository.UserRepository;
 import com.oumar.react.web.rest.vm.LoginVM;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -30,26 +27,12 @@ import static org.hamcrest.Matchers.not;
 public class UserJWTControllerIT {
 
     @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void testAuthorize() throws Exception {
-        User user = new User();
-        user.setLogin("user-jwt-controller");
-        user.setEmail("user-jwt-controller@example.com");
-        user.setActivated(true);
-        user.setPassword(passwordEncoder.encode("test"));
-
-        userRepository.save(user);
-
         LoginVM login = new LoginVM();
-        login.setUsername("user-jwt-controller");
+        login.setUsername("test");
         login.setPassword("test");
         mockMvc.perform(post("/api/authenticate")
             .contentType(MediaType.APPLICATION_JSON)
@@ -63,16 +46,8 @@ public class UserJWTControllerIT {
 
     @Test
     public void testAuthorizeWithRememberMe() throws Exception {
-        User user = new User();
-        user.setLogin("user-jwt-controller-remember-me");
-        user.setEmail("user-jwt-controller-remember-me@example.com");
-        user.setActivated(true);
-        user.setPassword(passwordEncoder.encode("test"));
-
-        userRepository.save(user);
-
         LoginVM login = new LoginVM();
-        login.setUsername("user-jwt-controller-remember-me");
+        login.setUsername("test");
         login.setPassword("test");
         login.setRememberMe(true);
         mockMvc.perform(post("/api/authenticate")

@@ -35,10 +35,6 @@ spring:
   jackson:
     serialization:
       indent-output: true
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017
-      database: react
   mail:
     host: localhost
     port: 25
@@ -71,7 +67,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: M2I3N2VhY2ZiNjUxMjkyNGI0ZjU3NjllZmRkMWVjYWQwNThiYzJkOWZmYWQ2NDBmMGU1NDgwZTJjNmNiNDliYmRhOGYyY2YzMGZiZDI4OTkxNGMyMTc4OGQ5ZDM3MDA2NjgzNjFjNDU0MmEwYTJkN2E5YjkzNzA2MjI0Yjk5YTk=
+        base64-secret: YTNiN2MzYzZjNjY0ZTEyMTIzZGU0N2YzN2M3N2E0NTM3NzUwNWMzYjZhZGY0OTQwOGFkN2Y4YjczMjVkMjUyNzVmYjU0NmIxNDI3ODAyYTg1MmNkYTQzMjZlMDQ1ODFkZjQ4YmRlZGYyYjQ4YmYyMDc5YmY0M2ExMTEwNmNkNjE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
@@ -88,9 +84,6 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
-  audit-events:
-    retention-period: 30 # Number of days before audit events are deleted.
-
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class

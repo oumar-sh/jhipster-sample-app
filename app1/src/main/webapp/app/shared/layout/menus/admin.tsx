@@ -7,9 +7,6 @@ import { NavDropdown } from './menu-components';
 
 const adminMenuItems = (
   <>
-    <MenuItem icon="user" to="/admin/user-management">
-      User management
-    </MenuItem>
     <MenuItem icon="tachometer-alt" to="/admin/metrics">
       Metrics
     </MenuItem>
@@ -18,9 +15,6 @@ const adminMenuItems = (
     </MenuItem>
     <MenuItem icon="list" to="/admin/configuration">
       Configuration
-    </MenuItem>
-    <MenuItem icon="bell" to="/admin/audits">
-      Audits
     </MenuItem>
     {/* jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here */}
     <MenuItem icon="tasks" to="/admin/logs">

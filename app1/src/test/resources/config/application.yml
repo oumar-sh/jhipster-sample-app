@@ -19,17 +19,16 @@ spring:
   jackson:
     serialization:
       write-durations-as-timestamps: false
-  data:
-    mongodb:
-      host: localhost
-      port: 0
-      database: react
   mail:
     host: localhost
   main:
     allow-bean-definition-overriding: true
   messages:
     basename: i18n/messages
+  security:
+    user:
+      name: test
+      password: test
   task:
     execution:
       thread-name-prefix: react-task-
@@ -65,14 +64,11 @@ jhipster:
       host: localhost
       port: 5000
       queue-size: 512
-  mail:
-    from: test@localhost
-    base-url: http://127.0.0.1:8080
   security:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: M2I3N2VhY2ZiNjUxMjkyNGI0ZjU3NjllZmRkMWVjYWQwNThiYzJkOWZmYWQ2NDBmMGU1NDgwZTJjNmNiNDliYmRhOGYyY2YzMGZiZDI4OTkxNGMyMTc4OGQ5ZDM3MDA2NjgzNjFjNDU0MmEwYTJkN2E5YjkzNzA2MjI0Yjk5YTk=
+        base64-secret: YTNiN2MzYzZjNjY0ZTEyMTIzZGU0N2YzN2M3N2E0NTM3NzUwNWMzYjZhZGY0OTQwOGFkN2Y4YjczMjVkMjUyNzVmYjU0NmIxNDI3ODAyYTg1MmNkYTQzMjZlMDQ1ODFkZjQ4YmRlZGYyYjQ4YmYyMDc5YmY0M2ExMTEwNmNkNjE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:
