@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.oumar.react"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "react",
+    "packageName": "com.oumar.react",
+    "packageFolder": "com/oumar/react",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "M2I3N2VhY2ZiNjUxMjkyNGI0ZjU3NjllZmRkMWVjYWQwNThiYzJkOWZmYWQ2NDBmMGU1NDgwZTJjNmNiNDliYmRhOGYyY2YzMGZiZDI4OTkxNGMyMTc4OGQ5ZDM3MDA2NjgzNjFjNDU0MmEwYTJkN2E5YjkzNzA2MjI0Yjk5YTk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1615586787567,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
